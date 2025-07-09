@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+.container{
+    width: 1213px;
+    height: 697px;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 32px;
+}
+
+.top{
+    position: absolute;
+    top: 155px;
+    left: 390px;
+    
+}
+.top1{
+    position: absolute;
+    top: 153px;
+    left: 650px;
+}
+.middle{
+    position: absolute;
+    /* top: 300px; */
+    left: 250px;
+}
+.middle1{
+    position: absolute;
+    left: 850px;
+    bottom: 330px;
+}
+
+.bottom{
+    position: absolute;
+    left: 410px;
+    bottom: 190px;
+}
+.bottom1{
+    position: absolute;
+    left: 700px;
+    bottom: 195px;
+}
+
+.container:hover{ .top {
+   	animation: diagonal-move-anim 0.3s linear  ;
+    transform: translate(-100px, -100px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover{ .top1 {
+   	animation: diagonal-move-anim1 0.3s linear  ;
+    transform: translate(100px, -100px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover{ .middle {
+   	animation: diagonal-move-anim2 0.3s linear  ;
+    transform: translate(-100px, 0px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover{ .middle1 {
+   	animation: diagonal-move-anim3 0.3s linear  ;
+    transform: translate(100px, 0px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover{ .bottom {
+   	animation: diagonal-move-anim4 0.3s linear  ;
+    transform: translate(-100px, 100px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover{ .bottom1 {
+   	animation: diagonal-move-anim5 0.3s linear  ;
+    transform: translate(100px, 100px);
+    /* animation: bounce 0.6s;  */
+}
+}
+.container:hover {.gif1{
+  animation: move1 0.3s linear  ;
+    transform: translate(0px, -100px);
+}}
+.container:hover {.gif2{
+ animation: move2 0.3s linear  ;
+    transform: translate(0px, 100px);
+}}
+.container:hover {.gif3{
+  animation: move3 0.3s linear  ;
+    transform: translate(-100px, 80px);
+}}
+.container:hover {.gif4{
+  animation: move4 0.3s linear  ;
+    transform: translate(100px, 80px);
+}}
+
+@keyframes diagonal-move-anim {
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(-100px, -100px);
+	}
+
+}
+@keyframes diagonal-move-anim1 {
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(100px, -100px);
+	}
+
+}
+@keyframes diagonal-move-anim2 {
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(-100px, 0px);
+	}
+
+}
+@keyframes diagonal-move-anim3 {
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(100px, 0px);
+	}
+
+}
+@keyframes diagonal-move-anim4 {
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(-100px, 100px);
+	}
+
+}
+@keyframes diagonal-move-anim5{
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(100px, 100px);
+	}
+
+}
+
+/* gifs animation */
+@keyframes move1{
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(0px, -100px);
+	}
+
+}
+
+@keyframes move2{
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(0px, 100px);
+	}
+
+}
+@keyframes move3{
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(-100px, 80px);
+	}
+
+}
+@keyframes move4{
+
+	0% {
+        
+		transform: translate(0, 0);
+	}
+
+	100% {
+        
+		transform: translate(100px, 80px);
+	}
+
+}
+img,
+.gif1, .gif2, .gif3, .gif4 {
+  transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); /* or any duration/easing you like */
+}
