@@ -1,241 +1,137 @@
 @import "tailwindcss";
 
-.container{
-    width: 1213px;
-    height: 697px;
-    /* background-color: aqua; */
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-}
-img{
-    height: 100px;
-    width: 100px;
-    border-radius: 32px;
+/* Container */
+.container {
+  width: 1213px;
+  height: 697px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.top{
-    position: absolute;
-    top: 155px;
-    left: 390px;
-    
+
+.wrapper {
+  position: absolute;
 }
-.top1{
-    position: absolute;
-    top: 153px;
-    left: 650px;
+.bouncer {
+  width: 100px;
+  height: 100px;
+  border-radius: 32px;
+  transition: transform 3s ease;
 }
-.middle{
-    position: absolute;
-    /* top: 300px; */
-    left: 250px;
-}
-.middle1{
-    position: absolute;
-    left: 850px;
-    bottom: 330px;
+.no-bounce {
+width: 100px;
+  height: 100px;
+  border-radius: 32px;
+  transition: transform 0.4s ease;
 }
 
-.bottom{
-    position: absolute;
-    left: 410px;
-    bottom: 190px;
+
+.top { top: 155px; left: 390px; }
+.top1 { top: 153px; left: 650px; }
+.middle { top: 300px; left: 250px; }
+.middle1 { bottom: 330px; left: 850px; }
+.bottom { bottom: 190px; left: 410px; }
+.bottom1 { bottom: 195px; left: 700px; }
+	
+
+ .gif1, .gif2, .gif3, .gif4 {
+  transform: translate(0, 0);
+  transition: transform 0.4s ease;
+  
 }
-.bottom1{
-    position: absolute;
-    left: 700px;
-    bottom: 195px;
+.container:hover .gif1 {
+  transform: translate(0, -100px);
+}
+.container:hover .gif2 {
+  transform: translate(0, 100px);
+}
+.container:hover .gif3 {
+  transform: translate(-100px, 80px);
+}
+.container:hover .gif4 {
+  transform: translate(100px, 80px);
 }
 
-.container:hover{ .top {
-   	animation: diagonal-move-anim 0.3s linear  ;
-    transform: translate(-100px, -100px);
-    /* animation: bounce 0.6s;  */
+/* (Duplicate @keyframes removed) */
+
+
+.container:hover .bounce-up .bouncer {
+  animation: bounce-up 3s ease-in-out 0.4s infinite;
+  
 }
+.container:hover .bounce-down .bouncer {
+  animation: bounce-down 3s ease-in-out 0.4s infinite;
 }
-.container:hover{ .top1 {
-   	animation: diagonal-move-anim1 0.3s linear  ;
-    transform: translate(100px, -100px);
-    /* animation: bounce 0.6s;  */
-}
-}
-.container:hover{ .middle {
-   	animation: diagonal-move-anim2 0.3s linear  ;
-    transform: translate(-100px, 0px);
-    /* animation: bounce 0.6s;  */
-}
-}
-.container:hover{ .middle1 {
-   	animation: diagonal-move-anim3 0.3s linear  ;
-    transform: translate(100px, 0px);
-    /* animation: bounce 0.6s;  */
-}
-}
-.container:hover{ .bottom {
-   	animation: diagonal-move-anim4 0.3s linear  ;
-    transform: translate(-100px, 100px);
-    /* animation: bounce 0.6s;  */
-}
-}
-.container:hover{ .bottom1 {
-   	animation: diagonal-move-anim5 0.3s linear  ;
-    transform: translate(100px, 100px);
-    /* animation: bounce 0.6s;  */
-}
-}
-.container:hover {.gif1{
-  animation: move1 0.3s linear  ;
-    transform: translate(0px, -100px);
-}}
-.container:hover {.gif2{
- animation: move2 0.3s linear  ;
-    transform: translate(0px, 100px);
-}}
-.container:hover {.gif3{
-  animation: move3 0.3s linear  ;
-    transform: translate(-100px, 80px);
-}}
-.container:hover {.gif4{
-  animation: move4 0.3s linear  ;
-    transform: translate(100px, 80px);
-}}
 
-@keyframes diagonal-move-anim {
 
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(-100px, -100px);
-	}
-
-}
-@keyframes diagonal-move-anim1 {
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(100px, -100px);
-	}
-
-}
-@keyframes diagonal-move-anim2 {
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(-100px, 0px);
-	}
-
-}
-@keyframes diagonal-move-anim3 {
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(100px, 0px);
-	}
-
-}
-@keyframes diagonal-move-anim4 {
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(-100px, 100px);
-	}
-
-}
-@keyframes diagonal-move-anim5{
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(100px, 100px);
-	}
+.top, .top1, .middle, .middle1, .bottom, .bottom1 {
+  transform: translate(0, 0);
+  transition: transform 0.4s ease;
 
 }
 
-/* gifs animation */
-@keyframes move1{
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(0px, -100px);
-	}
-
+.container:hover .top {
+  transform: translate(-100px, -100px);
+	
+}
+.container:hover .top1 {
+  transform: translate(100px, -100px);
+}
+.container:hover .middle {
+  transform: translate(-100px, 0);
+}
+.container:hover .middle1 {
+  transform: translate(100px, 0);
+}
+.container:hover .bottom {
+  transform: translate(-80px, 100px);
+}
+.container:hover .bottom1 {
+  transform: translate(20px, 100px);
 }
 
-@keyframes move2{
-
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(0px, 100px);
-	}
-
+@keyframes bounce-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  
 }
-@keyframes move3{
 
-	0% {
-        
-		transform: translate(0, 0);
-	}
-
-	100% {
-        
-		transform: translate(-100px, 80px);
-	}
-
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
 }
-@keyframes move4{
 
-	0% {
-        
-		transform: translate(0, 0);
-	}
 
-	100% {
-        
-		transform: translate(100px, 80px);
-	}
-
+.hello-text {
+   position: absolute;
+  top: -40px; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white !important;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  animation: fadeInOut 3s infinite;
+  white-space: nowrap;
 }
-img,
-.gif1, .gif2, .gif3, .gif4 {
-  transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); /* or any duration/easing you like */
+.hello-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* places it below the box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: white transparent transparent transparent; /* downward triangle */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
