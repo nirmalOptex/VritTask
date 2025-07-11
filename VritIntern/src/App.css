@@ -121,12 +121,12 @@ width: 100px;
 .hello-text::after {
   content: "";
   position: absolute;
-  top: 100%; /* places it below the box */
+  top: 100%; 
   left: 50%;
   transform: translateX(-50%);
   border-width: 6px;
   border-style: solid;
-  border-color: white transparent transparent transparent; /* downward triangle */
+  border-color: white transparent transparent transparent; 
 }
 
 @keyframes fadeInOut {

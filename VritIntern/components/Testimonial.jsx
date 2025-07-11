@@ -32,15 +32,15 @@ const icons = [
 
 
 const Testimonials = () => {
-  const [showHello1, setShowHello1] = useState(false);
-  const [showHello5, setShowHello5] = useState(false);
+  const [showmessage, setmessage] = useState(false);
+  const [showmessage1, setmessage1] = useState(false);
 
   useEffect(() => {
     const interval1 = setInterval(() => {
-      setShowHello1(prev => !prev);
+      setmessage(prev => !prev);
     }, 3000);
     const interval2 = setInterval(() => {
-      setShowHello5(prev => !prev);
+      setmessage1(prev => !prev);
     }, 3000);
 
     return () => {
@@ -55,7 +55,7 @@ const Testimonials = () => {
         {/* Wrapped image elements */}
         <div className="wrapper top bounce-down relative ">
            <img className="bouncer" src="./assets/image1.png" alt="" />
-                  {showHello1 && (
+                  {showmessage && (
            <div className="hello-text">Amazing⭐⭐⭐⭐⭐</div>
   )}
 </div>
@@ -74,7 +74,7 @@ const Testimonials = () => {
         </div>
         <div className="wrapper bottom1 bounce-up relative">
           <img className="bouncer " src="./assets/image4.png" alt="" />
-          {showHello1 && (
+          {showmessage1 && (
              <div className="hello-text ">     ⭐⭐⭐⭐⭐</div> )}
         </div>
 
