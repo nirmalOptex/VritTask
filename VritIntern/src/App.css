@@ -27,7 +27,6 @@ width: 100px;
   transition: transform 0.4s ease;
 }
 
-
 .top { top: 155px; left: 390px; }
 .top1 { top: 153px; left: 650px; }
 .middle { top: 300px; left: 250px; }
@@ -35,7 +34,6 @@ width: 100px;
 .bottom { bottom: 190px; left: 410px; }
 .bottom1 { bottom: 195px; left: 700px; }
 	
-
  .gif1, .gif2, .gif3, .gif4 {
   transform: translate(0, 0);
   transition: transform 0.4s ease;
@@ -53,9 +51,6 @@ width: 100px;
 .container:hover .gif4 {
   transform: translate(100px, 80px);
 }
-
-/* (Duplicate @keyframes removed) */
-
 
 .container:hover .bounce-up .bouncer {
   animation: bounce-up 3s ease-in-out 0.4s infinite;
