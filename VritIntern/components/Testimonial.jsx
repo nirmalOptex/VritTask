@@ -4,25 +4,25 @@ import { useState, useEffect } from "react";
 const icons = [
   {
     id: 1,
-    src: "./assets/gif1.gif",
+    src: "./gif1.gif",
     className: "gif1",
     style: { top: "22%", left: "42%" },
   },
   {
     id: 2,
-    src: "./assets/gif2.gif",
+    src: "./gif2.gif",
     className: "gif2",
     style: { top: "62%", left: "45%" },
   },
   {
     id: 3,
-    src: "./assets/gif4.gif",
+    src: "./gif4.gif",
     className: "gif3",
     style: { bottom: "32%", left: "25%" },
   },
   {
     id: 4,
-    src: "./assets/gif3.gif",
+    src: "./gif3.gif",
     className: "gif4",
     style: { bottom: "32%", right: "25%" },
   },
@@ -54,26 +54,26 @@ const Testimonials = () => {
       <div className="container">
         {/* Wrapped image elements */}
         <div className="wrapper top bounce-down relative ">
-           <img className="bouncer" src="./assets/image1.png" alt="" />
+           <img className="bouncer" src="./image1.png" alt="" />
                   {showmessage && (
            <div className="hello-text">Amazing⭐⭐⭐⭐⭐</div>
   )}
 </div>
         <div className="wrapper top1 bounce-up">
-          <img className="bouncer" src="./assets/image2.png" alt="" />
+          <img className="bouncer" src="./image2.png" alt="" />
           {}
         </div>
         <div className="wrapper middle bounce-up">
-          <img className="bouncer" src="./assets/image6.png" alt="" />
+          <img className="bouncer" src="./image6.png" alt="" />
         </div>
         <div className="wrapper middle1 bounce-down">
-          <img className="bouncer" src="./assets/image3.png" alt="" />
+          <img className="bouncer" src="./image3.png" alt="" />
         </div>
         <div className="wrapper bottom bounce-down">
-          <img className="bouncer" src="./assets/image5.png" alt="" />
+          <img className="bouncer" src="./image5.png" alt="" />
         </div>
         <div className="wrapper bottom1 bounce-up relative">
-          <img className="bouncer " src="./assets/image4.png" alt="" />
+          <img className="bouncer " src="./image4.png" alt="" />
           {showmessage1 && (
              <div className="hello-text ">     ⭐⭐⭐⭐⭐</div> )}
         </div>
